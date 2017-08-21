@@ -27,7 +27,10 @@ function mutate({ name = "mutate", op }) {
         const { setTimeout, clearTimeout } = this.props
 
         try {
-          this.loadTimer = setTimeout(mutate.openLoading, mutate.loadingWait)
+          this.loadTimer = setTimeout(
+            mutate.openLoading,
+            mutate.loadingWait * 1000,
+          )
           const data = await op(...args)
           clearTimeout(this.loadTimer)
           return data

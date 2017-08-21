@@ -1,6 +1,6 @@
 {
   "name": "react-hoc-mutate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "HOC to help you mutate restful data",
   "main": "lib/index.js",
   "repository": "https://github.com/sethyuan/react-hoc-mutate.git",
