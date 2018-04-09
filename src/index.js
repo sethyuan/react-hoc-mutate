@@ -43,6 +43,12 @@ function mutate({ name = "mutate", op }) {
         }
       }
     }
+
+    // copy all static members except `displayName`
+    // eslint-disable-next-line
+    const { displayName: ignored, ...members } = Comp
+    Object.assign(Mutate, members)
+
     return Mutate
   }
 }
