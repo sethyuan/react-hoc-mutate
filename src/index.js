@@ -44,9 +44,10 @@ function mutate({ name = "mutate", op }) {
       }
     }
 
-    // copy all static members except `displayName`
+    // copy all static members except `displayName` and
+    // `getDerivedStateFromProps`
     // eslint-disable-next-line
-    const { displayName: ignored, ...members } = Comp
+    const { displayName: ignored, getDerivedStateFromProps, ...members } = Comp
     Object.assign(Mutate, members)
 
     return Mutate
